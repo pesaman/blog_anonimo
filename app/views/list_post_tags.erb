@@ -1,0 +1,26 @@
+<h1>Posts Relacionados</h1>
+
+<h2><a href="/"></a></h2>
+ <a href="/"><button id="Home" type="button">New Post</button></a>
+ <a href="javascript:history.back(-1);"><button id="Home" type="button">Regresar</button></a><br><br>
+
+<table>
+  <tr>
+    <th width="80">Num</th>
+    <th width="200">Titulo</th>
+    <th width="200">Contenido</th>
+    <th width="200">Actualizar</th>
+    <th width="200">Eliminar</th>
+  </tr>
+<% @post_list_tags.each_with_index do |psti, index| %>
+
+  <tr>
+    <td><%= index + 1 %>.</td>
+   <td><a><%= psti.title %> </a></td></a>
+   <td><%= psti.body %></td>
+   <td><a href="/update_post/<%= psti.id %>"> Si </a></td></a>
+   <td><a href="/delete_post/<%= psti.id %>"> Eliminar</a></td></a>
+  </tr>
+
+<% end %>
+</table>

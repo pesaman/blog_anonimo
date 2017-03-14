@@ -1,0 +1,24 @@
+<h1>All Tags para este Post</h1>
+
+<h2><a href="/"></a></h2>
+<a href="/"><button id="Home" type="button">New Post</button></a>
+<a href="/post_all" ><button id="sesion" type="button">All Post</button></a><br><br>
+<table>
+  <tr>
+    <th width="80">Num</th>
+    <th width="200">Tags de Post</th>
+    <th width="200">Post Relacionados</th>
+    
+  </tr>
+<% @post_list.each_with_index do |pst, index| %>
+
+  <tr>
+    <td><%= index + 1 %>.</td>
+    <td><a><%= pst.name %> </a></td></a>
+
+    <td><a href="/list_post_tags/<%= pst.id %>"> Ver posts para esté tag </a></td></a>
+
+  </tr>
+
+<% end %>
+</table>

@@ -1,0 +1,24 @@
+<h1>All Post</h1>
+
+<h2><a href="/"></a></h2>
+ <a href="/"><button id="Home" type="button">New Post</button></a><br><br>
+<table>
+  <tr>
+    <th width="80">Num</th>
+    <th width="200">Titulo de  Post</th>
+    <th width="200">Contenido</th>
+    <th width="200">Mostrar Tags</th>
+
+  </tr>
+<% @all_post.each_with_index do |pst, index| %>
+
+  <tr>
+    <td><%= index + 1 %>.</td>
+   <td><a><%= pst.title %> </a></td></a>
+    <td><%= pst.body %></td>
+    <td><a href="/list_post/<%= pst.id %>"> ver tags  </a></td></a>
+
+  </tr>
+
+<% end %>
+</table>
